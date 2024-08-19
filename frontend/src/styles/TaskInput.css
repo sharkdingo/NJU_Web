@@ -1,0 +1,63 @@
+.task-input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+.task-input-container input {
+  border-radius: 0.2rem;
+  margin: 0;
+  height: 1.25rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.task-input-container .button-group {
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+}
+.task-input-container .button-group .attachment-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.2rem 0.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(142, 91, 69, 0.3);
+  color: #4949cd;
+}
+.task-input-container .button-group .attachment-button:hover {
+  background-color: rgba(108, 69, 52, 0.3);
+}
+.task-input-container .button-group .comment-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.2rem 0.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(173, 216, 230, 0.3);
+  color: #4949cd;
+}
+.task-input-container .button-group .comment-button:hover {
+  background-color: rgba(134, 197, 218, 0.3);
+}
+.task-input-container .button-group .delete-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.2rem 0.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 192, 203, 0.3);
+  color: #b54242;
+}
+.task-input-container .button-group .delete-button:hover {
+  background-color: rgba(255, 141, 161, 0.3);
+}
+
+/*# sourceMappingURL=TaskInput.css.map */

@@ -1,0 +1,79 @@
+$primary-color: #ADD8E6;
+$secondary-color: #ddd;
+$background-color: rgba(255, 255, 255, 0.6);
+$text-color: #333;
+$border-radius: 5px;
+$padding: 12px;
+$gap: 10px;
+
+.task-list-container {
+    position: relative;
+    width: 18.75rem; // 300px converted to rem
+    margin: 1rem auto;
+    padding: $padding;
+    border: 1px solid $secondary-color;
+    border-radius: $border-radius;
+    background-color: $background-color;
+
+    .close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: transparent;
+        border: none;
+        color: $text-color;
+        padding: 8px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: color 0.3s;
+        outline: none;
+
+        &:hover {
+            background-color: darken(rgba(255, 255, 255, 0.8), 20%);
+        }
+    }
+
+    .list-name-container {
+        text-align: center;
+        margin: 1.25rem; // 20px converted to rem
+
+        .list-name {
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .change-list-name {
+            font-size: 1em;
+            background-color: $background-color;
+        }
+    }
+
+    .tasks-container {
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+        justify-content: center;
+    }
+
+    .add-task-button {
+        margin-top: $gap;
+        padding: 0.3125rem 0.625rem; // 5px 10px converted to rem
+        cursor: pointer;
+        width: 100%;
+        background-color: $primary-color;
+        color: $background-color;
+        border: none;
+        border-radius: $border-radius;
+        font-size: 1.2em;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    .last-modified-time {
+        margin-top: $gap;
+        color: rgba(23, 19, 132, 0.3);
+        font-size: 1em;
+    }
+}

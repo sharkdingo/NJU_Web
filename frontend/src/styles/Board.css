@@ -1,0 +1,112 @@
+.board-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #ADD8E6;
+}
+
+.edit-board-name {
+  margin: 0;
+  font-size: 1.5em;
+  color: pink;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.board-name {
+  margin: 0;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: pink;
+}
+
+.task-lists-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 10px;
+  overflow-x: auto;
+}
+.task-lists-container .task-list {
+  display: inline-block;
+}
+
+.add-task-list-container,
+.task-list-creation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 100px;
+  margin: 20px auto;
+  border: 1px dashed #ADD8E6;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.add-task-list-container input,
+.task-list-creation-container input {
+  width: 80%;
+  height: 30px;
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.task-list-creation-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.task-list-creation-buttons .confirm-button {
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #ADD8E6;
+}
+.task-list-creation-buttons .confirm-button:hover {
+  background-color: #86c5da;
+}
+.task-list-creation-buttons .cancel-button {
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: pink;
+}
+.task-list-creation-buttons .cancel-button:hover {
+  background-color: #ff8da1;
+}
+
+.add-task-list-button {
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: #ADD8E6;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .task-lists-container {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  .add-task-list-container,
+  .task-list-creation-container {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/*# sourceMappingURL=Board.css.map */

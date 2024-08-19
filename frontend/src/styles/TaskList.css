@@ -1,0 +1,64 @@
+.task-list-container {
+  position: relative;
+  width: 18.75rem;
+  margin: 1rem auto;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.task-list-container .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #333;
+  padding: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: color 0.3s;
+  outline: none;
+}
+.task-list-container .close-button:hover {
+  background-color: rgba(204, 204, 204, 0.8);
+}
+.task-list-container .list-name-container {
+  text-align: center;
+  margin: 1.25rem;
+}
+.task-list-container .list-name-container .list-name {
+  cursor: pointer;
+  font-size: 1em;
+}
+.task-list-container .list-name-container .change-list-name {
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.task-list-container .tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.task-list-container .add-task-button {
+  margin-top: 10px;
+  padding: 0.3125rem 0.625rem;
+  cursor: pointer;
+  width: 100%;
+  background-color: #ADD8E6;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+.task-list-container .add-task-button:hover {
+  background-color: #86c5da;
+}
+.task-list-container .last-modified-time {
+  margin-top: 10px;
+  color: rgba(23, 19, 132, 0.3);
+  font-size: 1em;
+}
+
+/*# sourceMappingURL=TaskList.css.map */

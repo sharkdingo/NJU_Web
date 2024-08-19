@@ -1,0 +1,128 @@
+$primary-color: #ADD8E6;
+$cancel-color: pink;
+$background-color: rgba(255, 255, 255, 0);;
+$white-color: rgba(255, 255, 255, 0.6);
+$border-color: #ADD8E6;
+$padding: 20px;
+$gap: 10px;
+$border-radius: 5px;
+
+.board-container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    padding: $padding;
+    background-color: $background-color;
+}
+
+.board-header {
+    display: flex;
+    align-items: center;
+    height: 60px; // Adjust height as needed
+    border-bottom: 1px solid $border-color;
+}
+
+.edit-board-name {
+    margin: 0;
+    font-size: 1.5em;
+    color: $cancel-color;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.board-name {
+    margin: 0;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: $cancel-color;
+}
+
+.task-lists-container {
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
+    padding-top: $gap; // Ensure the gap is consistent with board-header height
+    overflow-x: auto;
+
+    .task-list {
+        display: inline-block;
+    }
+
+}
+
+.add-task-list-container,
+.task-list-creation-container {
+    display: flex;
+    flex-direction: column; // Stack input and buttons vertically
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100px;
+    margin: 20px auto;
+    border: 1px dashed $border-color;
+    border-radius: $border-radius;
+    background-color: $white-color;
+
+    input {
+        width: 80%;
+        height: 30px;
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: $gap; // Add space between input and buttons
+        background-color: $white-color;
+    }
+}
+
+@mixin button($background-color) {
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    color: $white-color;
+    background-color: $background-color;
+}
+
+.task-list-creation-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .confirm-button {
+        @include button($primary-color);
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    .cancel-button {
+        @include button($cancel-color);
+
+        &:hover {
+            background-color: darken($cancel-color, 10%);
+        }
+    }
+
+}
+
+
+.add-task-list-button {
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: $primary-color;
+    cursor: pointer;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .task-lists-container {
+        flex-direction: column;
+        overflow-x: visible;
+    }
+
+    .add-task-list-container,
+    .task-list-creation-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

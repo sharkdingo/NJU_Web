@@ -1,0 +1,49 @@
+.comment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.comment-modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.25rem;
+  border-radius: 0.3125rem;
+  width: 18.75rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.comment-modal-content textarea {
+  width: 90%;
+  height: 3.125rem;
+  resize: none;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  border: 1px solid rgba(13, 13, 13, 0.5);
+}
+.comment-modal-content .add-comment-button {
+  background-color: #ADD8E6;
+}
+.comment-modal-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+.comment-modal-content ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+  align-items: center;
+}
+.comment-modal-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=CommentModel.css.map */

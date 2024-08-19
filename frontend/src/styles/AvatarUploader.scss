@@ -1,0 +1,30 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --background-color: #ADD8E6;
+  --border-color: #ddd;
+  --avatar-size:  2.5rem; // 圆形头像大小
+}
+
+.avatar-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .file-input {
+    display: none;
+  }
+  .avatar-image {
+    cursor: pointer;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    object-fit: cover;
+    border-radius: 50%; // 使图像变成圆形
+    border: 0.2rem solid var(--border-color); // 可选：添加边框
+    background-color: var(--background-color); // 默认背景色
+    background-size: cover;
+    // 预览时背景色改为透明
+    &:not([src]) {
+      background-color: var(--background-color);
+    }
+  }
+}

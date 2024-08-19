@@ -1,0 +1,77 @@
+$gap-small: 0.4rem; // 10px converted to rem
+$padding-small: 0.2rem 0.2rem;
+$primary-color: rgba(173, 216, 230, 0.3);
+$cancel-color: rgba(255, 192, 203, 0.3);
+$attachment-color: rgba(142, 91, 69, 0.3);
+$border-radius: 0.2rem;
+
+.task-input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: $gap-small; // 替换了 margin-right: 10px 用于控制间距
+
+  input {
+    border-radius: $border-radius;
+    margin: 0;
+    height: 1.25rem;
+    width: 100%;
+    background: rgba(256, 256, 256, 0.5);
+  }
+
+  .button-group {
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    gap: $gap-small;
+    font-size: 0.8rem;
+
+    .attachment-button {
+      height: 1.5rem;
+      width: 1.5rem;
+      padding: $padding-small;
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      background-color: $attachment-color;
+      color: #4949cd;
+
+      &:hover {
+        background-color: darken($attachment-color, 10%);
+      }
+    }
+
+    .comment-button {
+      height: 1.5rem;
+      width: 1.5rem;
+      padding: $padding-small;
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      background-color: $primary-color;
+      color: #4949cd;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .delete-button {
+      height: 1.5rem;
+      width: 1.5rem;
+      padding: $padding-small;
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      background-color: $cancel-color;
+      color: #b54242;
+
+      &:hover {
+        background-color: darken($cancel-color, 10%);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --background-color: #ADD8E6;
+  --border-color: #ddd;
+  --avatar-size: 2.5rem;
+}
+
+.avatar-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar-uploader .file-input {
+  display: none;
+}
+.avatar-uploader .avatar-image {
+  cursor: pointer;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.2rem solid var(--border-color);
+  background-color: var(--background-color);
+  background-size: cover;
+}
+.avatar-uploader .avatar-image:not([src]) {
+  background-color: var(--background-color);
+}
+
+/*# sourceMappingURL=AvatarUploader.css.map */

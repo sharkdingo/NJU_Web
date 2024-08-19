@@ -1,0 +1,78 @@
+// Variables
+$primary-color: #007bff;
+$primary-color-dark: #0056b3;
+$error-color: #dc3545;
+$background-color: rgb(256,256,256,0);
+$card-background-color: rgb(256,256,256,0);
+$border-color: #ddd;
+$font-size-base: 1rem; // 16px
+
+// Mixins
+@mixin box-shadow($color: rgba(0, 0, 0, 0.1), $offset: 4px, $blur: 8px) {
+  box-shadow: 0 $offset $blur $color;
+}
+
+// LoginPage Container
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vw;
+  background-color: $background-color;
+}
+
+// Heading
+h1 {
+  margin-bottom: 2vw; // Responsive margin
+  font-size: 4vw; // Responsive font size
+  color: black;
+}
+
+// LoginPage Form
+.login-form {
+  background-color: $card-background-color;
+  padding: 2vw; // Responsive padding
+  border-radius: 0.5rem; // Rounded corners
+  @include box-shadow; // Using mixin for box-shadow
+  width: 80vw; // Responsive width
+  max-width: 400px; // Maximum width for large screens
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw; // Responsive gap
+
+  input {
+    padding: 1vw; // Responsive padding
+    border: 1px solid $border-color;
+    border-radius: 0.25rem; // Rounded corners
+    font-size: $font-size-base;
+    width: 90%; // Full width
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  button {
+    padding: 1vw; // Responsive padding
+    border: none;
+    border-radius: 0.25rem; // Rounded corners
+    background-color: $primary-color;
+    color: white;
+    font-size: $font-size-base;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 95%; // Full width
+
+    &:hover {
+      background-color: $primary-color-dark;
+    }
+  }
+}
+
+// Error Message
+.error {
+  color: $error-color;
+  margin-bottom: 1vw; // Responsive margin
+  font-size: 1.5vw; // Responsive font size
+}
