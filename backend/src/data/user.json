@@ -4,41 +4,8 @@
     "password": "123456",
     "board": {
       "name": "Board",
-      "taskLists": [
-        {
-          "id": 0,
-          "name": "121",
-          "tasks": [
-            {
-              "id": 0,
-              "name": "12112",
-              "comments": [],
-              "attachments": []
-            }
-          ],
-          "lastModifiedDate": "\"2024-08-19T15:15:29.770Z\""
-        },
-        {
-          "id": 1,
-          "name": "232",
-          "tasks": [],
-          "lastModifiedDate": "\"2024-08-19T15:14:15.150Z\""
-        },
-        {
-          "id": 2,
-          "name": "12122",
-          "tasks": [
-            {
-              "id": 0,
-              "name": "2323",
-              "comments": [],
-              "attachments": []
-            }
-          ],
-          "lastModifiedDate": "\"2024-08-19T15:15:35.347Z\""
-        }
-      ]
+      "taskLists": []
     },
-    "avatar": "/123456/avatar.jpg"
+    "avatar": "/123456/avatar.png"
   }
 ]
